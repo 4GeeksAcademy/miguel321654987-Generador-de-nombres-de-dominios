@@ -1,5 +1,29 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-body{
-    background: white;
+body {
+    background-image: url("https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.container {
+    width: 900 px;
+    margin: 40 px;
+    padding: 40 px;
+}
+
+#titulo {
+    color: rgb(31, 46, 19);
+    text-align: center;
+    margin-bottom: 40 px;
+}
+
+#domAleatorio {
+    color: orangered;
+    text-align: center;
+    margin-top: 50 px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
 }
