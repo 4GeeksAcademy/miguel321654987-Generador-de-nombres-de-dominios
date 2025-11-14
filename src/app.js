@@ -24,9 +24,10 @@ window.onload = function () {
         }
       }
     }
-
     return dominios;
   }
+  console.log(genDominio());
   document.getElementById("dominio").innerText = genDominio().join("\n");
+  
 }
 window.onload()
