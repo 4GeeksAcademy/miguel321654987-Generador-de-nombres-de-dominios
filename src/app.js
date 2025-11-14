@@ -8,21 +8,25 @@ import "./assets/img/4geeks.ico";
 window.onload = function () {
 
   let articulo = ["la", "una", "su"];
-  let adjetivo = ["gran", "mejor", "loca"];
+  let adjetivo = ["gran", "loca"];
   let sustantivo = ["solucion", "respuesta", "idea"];
-  let extension = [".com", ".net", ".es", ".org"];
+  let extension = [".com", ".es", ".org"];
 
-  function genDomAleatorio() {
+  function genDominio() {
+    let dominios = [];
 
     for (let i = 0; i < articulo.length; i++) {
-      let art = Math.floor(Math.random() * articulo.length);
-      let adj = Math.floor(Math.random() * adjetivo.length);
-      let sust = Math.floor(Math.random() * sustantivo.length);
-      let ext = Math.floor(Math.random() * extension.length);
-      return articulo[art] + adjetivo[adj] + sustantivo[sust] + extension[ext];
+      for (let j = 0; j < adjetivo.length; j++) {
+        for (let k = 0; k < sustantivo.length; k++) {
+          for (let l = 0; l < extension.length; l++) {
+            dominios.push(articulo[i] + adjetivo[j] + sustantivo[k] + extension[l]);
+          }
+        }
+      }
     }
-  }
-  document.getElementById("domAleatorio").innerText = genDomAleatorio()
 
+    return dominios;
+  }
+  document.getElementById("dominio").innerText = genDominio().join("\n");
 }
 window.onload()
